@@ -10,7 +10,7 @@ class CarManager(Turtle):
   def __init__(self, position: tuple) -> None:
     super().__init__()
     self.shape("square")
-    self.color(COLORS[random.randint(0, 5)])
+    self.color(random.choice(COLORS))
     self.penup()
     self.shapesize(stretch_wid=1, stretch_len=2)
     self.setheading(180) # WEST
@@ -29,6 +29,6 @@ class CarManager(Turtle):
     """Speed up the car"""
     self.move_x += MOVE_INCREMENT
   
-  def reuse_car_car(self):
+  def reuse_car(self):
     """If car exits screen reuses the car back into the screen."""
     self.goto(310, random.randint(-250, 250))

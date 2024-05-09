@@ -13,7 +13,7 @@ screen.tracer(0)
 car_positions = [( random.randint(-250, 250), random.randint(-250, 250) ) for _ in range(0, 20)]
 cars = [CarManager(position=position) for position in car_positions]
 player = Player()
-score = Scoreboard((-260, 260))
+score = Scoreboard()
 
 screen.listen()
 screen.onkey(player.move, "Up")
@@ -39,14 +39,14 @@ while game_is_on:
   
   # If player reaches the finish line.
   if player.detect_finish_line():
-    score.increase_score()
+    score.increase_level()
     for car in cars:
       car.new_level()
 
   # if car collides with player
   for car in cars:
     if car.distance(player) < 20:
-      Scoreboard((0,0), text="GAME OVER")
+      score.game_over()
       game_is_on = False
 
   count+=1

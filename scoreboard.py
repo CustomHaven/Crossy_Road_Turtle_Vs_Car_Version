@@ -4,21 +4,25 @@ FONT = ("Courier", 24, "normal")
 
 class Scoreboard(Turtle):
   """ScoreBoard blueprint"""
-  def __init__(self, position, text=None) -> None:
+  def __init__(self) -> None:
     super().__init__()
-    self.score = 0
+    self.level = 1
     self.hideturtle()
     self.penup()
-    self.goto(position)
-    text_arg = f"Level: {self.score}" if text == None else text
-    self.write_text(text_arg, t_align="center" if text == "GAME OVER" else "left")
+    self.goto(-260, 260)
+    self.update_text()
   
-  def write_text(self, text, t_align):
+  def update_text(self):
     """Writes on to the screen."""
-    self.write(arg=text, align=t_align, font=FONT)
+    self.write(arg=f"Level: {self.level}", align="left", font=FONT)
   
-  def increase_score(self):
-    """Increases the score."""
-    self.score += 1
+  def increase_level(self):
+    """Increases the level."""
+    self.level += 1
     self.clear()
-    self.write_text(f"Level: {self.score}", "left")
+    self.update_text()
+  
+  def game_over(self):
+    """Writes game over to the screen."""
+    self.goto(0,0)
+    self.write(f"GAME OVER", align="center", font=FONT)
