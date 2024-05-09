@@ -1,0 +1,73 @@
+------------------------------------------------------------ SCREEN -------------------------------------------------------------
+
+FIXME: 1. Start the Screen  DONE
+
+1. Create the White Screen. DONE
+
+2. Set the dimensions 600x600. DONE
+
+3. Initilize with tracer then start the game with a while loop to update, and sleep. DONE
+
+------------------------------------------------------------ PLAYER -------------------------------------------------------------
+
+FIXME: 2. class Player
+
+1. Create a player on the screen. DONE
+
+2. Player is a black turtle. DONE
+
+3. Make the car face up
+
+4. Place player on the bottom y=-280 and x is 0. DONE
+
+5. Player can only move up. DONE
+# TODO: RETHINK THIS 1.
+6. If the player leaves the top screen restart the player to the starting position. DONE - AND USE THIS on the main. MIGHT STOP THIS
+
+------------------------------------------------------------ CAR -------------------------------------------------------------
+
+FIXME: 3. class CarManager
+
+1. Create a car on the screen. DONE
+
+2. Car is a rectangle therefore its width is 40px and height is 20px. DONE
+
+3. Pick a random color from the list provided to color the car by. DONE
+
+4. Place the car in a random location, BUT IMPORTANT KEEP IT ABOVE the player starting line. DONE
+
+5. Append the car into a car_list list. DONE
+
+------------------------------------------------------------ APPEND A NEW CAR -------------------------------------------------------------
+
+FIXME: 4. Append a new car to the car_list
+
+1. Add a new car to enter the screen. DONE
+
+2. Place the car randomly along the y-axis but outside the +axis on the x-axis. Therefore given the effect as if the car moves into the screen. DONE
+
+3. Append the car into the car_list. DONE
+
+------------------------------------------------------------ CLEAN UP CAR_LIST -------------------------------------------------------------
+
+FIXME: 5. Clean up the car_list
+
+1. When a car exists out from the -x axis side, then remove the car from the car_list list. DONE
+
+2. This keeps the game from overflowing in memory! DONE
+
+------------------------------------------------------------ SCOREBOARD -------------------------------------------------------------
+
+FIXME: 6. class Scoreboard
+
+1. Type on the board the current level and score. DONE
+
+------------------------------------------------------------ DETECT COLLISION -------------------------------------------------------------
+
+FIXME: 7. Detect collision between player and car.
+
+1. Detect collision between car and player.
+
+2. If car gets into contact with player end the Game with GAME OVER message using the ScoreBoard class.
+
+3. End the game.
